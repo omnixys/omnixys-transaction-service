@@ -1,0 +1,21 @@
+enum TransactionType {
+    DEPOSIT
+WITHDRAWAL
+TRANSFER
+INCOME
+REFUND
+PAYMENT
+}
+
+"""
+Unterstützte Währungen im System.
+"""
+enum CurrencyType {
+    EUR     # Euro
+    USD     # US-Dollar
+    GBP     # Britisches Pfund
+    CHF     # Schweizer Franken
+    JPY     # Japanischer Yen
+    CNY     # Chinesischer Yuan
+    GHS     # Ghanaischer Cedi
+}

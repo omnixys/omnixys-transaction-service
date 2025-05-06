@@ -1,0 +1,14 @@
+
+
+input CreateTransactionInput {
+    amount: Float
+    receiver:ID
+    sender: ID
+}
+
+input TransactionSearchCriteria {
+    username: String
+    sender: ID
+    receiver: ID
+    type: TransactionType
+}

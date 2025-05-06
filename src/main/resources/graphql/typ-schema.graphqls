@@ -1,0 +1,11 @@
+
+
+type Transaction {
+    id: ID
+    type: TransactionType
+    # currencyType: CurrencyType
+    amount: Float
+    sender: ID
+    receiver: ID
+    created: String
+}
