@@ -1,149 +1,78 @@
-.gradle
-**/build/
-!src/**/build/
+# Java
+*.class
+*.jar
+*.war
+*.ear
 
-# Ignore Gradle GUI config
-gradle-app.setting
-
-# Avoid ignoring Gradle wrapper jar file (.jar files are usually ignored)
-!gradle-wrapper.jar
-
-# Avoid ignore Gradle wrappper properties
-!gradle-wrapper.properties
-
-# Cache of project
-.gradletasknamecache
-
-# Eclipse Gradle plugin generated files
-# Eclipse Core
-.project
-# JDT-specific (Eclipse Java Development Tools)
-.classpath
-
-HELP.md
-.gradle
+# Gradle
+.gradle/
 build/
 !gradle/wrapper/gradle-wrapper.jar
-!**/src/main/**/build/
-!**/src/test/**/build/
+!gradle/wrapper/gradle-wrapper.properties
 
-### STS ###
-.apt_generated
-.classpath
-.factorypath
-.project
-.settings
-.springBeans
-.sts4-cache
-bin/
-!**/src/main/**/bin/
-!**/src/test/**/bin/
+# Maven (falls versehentlich verwendet)
+target/
 
-### IntelliJ IDEA ###
-.idea
-*.iws
+# IDEs
+.idea/
 *.iml
 *.ipr
-out/
-!**/src/main/**/out/
-!**/src/test/**/out/
-
-### NetBeans ###
-/nbproject/private/
-/nbbuild/
-/dist/
-/nbdist/
-/.nb-gradle/
-
-### VS Code ###
-.vscode/
-
-# compiled output
-/dist
-/node_modules
-/build
-
-# Generierte Dateien
-build
-.extras/doc/projekthandbuch/html/*
-.extras/doc/folien/*.html
-.extras/doc/api/*
-.extras/doc/ReadMe.html
-scripts/dependency-check-report.html
-node-ts
-temp
-tmp
-dependencies.svg
-
-# Sensible Daten (Passwort, Token, private Schluessel)
-.extras/compose/db/mysql/db_root_password.txt
-.extras/compose/db/postgres/db_password.txt
-.extras/lasttest-locust/__pycache__
-.extras/lasttest-locust/.venv
-.extras/postman
-.extras/*.png
-.extras/*.jpeg
-.extras/*.gif
-.extras/*.mp4
-.extras/*.mpeg
-.extras/*.mkv
-.extras/*.avi
-.extras/*.ogg
-.extras/*.webm
-src/config/resources/tls/key.pem
-sonar-project.properties
-
-# Logs
-logs
-*.log
-npm-debug.log*
-pnpm-debug.log*
-yarn-debug.log*
-yarn-error.log*
-lerna-debug.log*
-
-# OS
-.DS_Store
-
-# Tests
-/coverage
-/.nyc_output
-.clinic
-__tests__/buch/__snapshots__
-
-# IDEs and editors
-/.idea
+*.iws
 .project
 .classpath
-.c9/
-*.launch
 .settings/
-*.sublime-workspace
+.vscode/
 
-# IDE - VSCode
-.vscode/*
-!.vscode/settings.json
-!.vscode/tasks.json
-!.vscode/launch.json
-!.vscode/extensions.json
+# Betriebssystem-Dateien
+.DS_Store
+Thumbs.db
 
-# dotenv environment variable files
-.env
-.env.development.local
-.env.test.local
-.env.production.local
-.env.local
-
-# temp directory
-.temp
-.tmp
-
-# Runtime data
-pids
+# Testberichte und Logs
+*.log
+*.tmp
 *.pid
 *.seed
 *.pid.lock
+test-output/
+out/
+logs/
+*.hprof
 
-# Diagnostic reports (https://nodejs.org/api/report.html)
-report.[0-9]*.[0-9]*.[0-9]*.[0-9]*.json
+# Coverage
+coverage/
+jacoco.exec
+*.ec
+*.coverage
+*.lcov
+.build/
 
+# Environment files
+.env
+.env.local
+.env.*
+
+# Sonar
+.sonar/
+sonar-project.properties
+
+# TLS / Secrets
+src/main/resources/tls/*.pem
+src/main/resources/tls/*.key
+src/main/resources/application-secrets.yml
+
+# Backup/IDE/Temp-Dateien
+*.bak
+*.swp
+*.swo
+*.orig
+*.rej
+
+# System-specific
+*.~*
+
+# OS-specific
+ehthumbs.db
+Icon?
+
+tmp/
+.tmp/
