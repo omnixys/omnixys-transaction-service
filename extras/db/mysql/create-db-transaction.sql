@@ -1,12 +1,12 @@
 --
--- CREATE ROLE transaction_db_user LOGIN PASSWORD 'GentleCorp21.08.2024';
+-- CREATE ROLE transaction_db_user LOGIN PASSWORD 'omnixys21.08.2024';
 --
 -- CREATE DATABASE transaction_db;
 --
 -- GRANT ALL ON DATABASE transaction_db TO transaction_db_user;
 --
 -- CREATE TABLESPACE transaction_tablespace OWNER transaction_db_user LOCATION '/var/lib/postgresql/tablespace/transaction';
--- CREATE TABLESPACE transaction_tablespace OWNER transaction_db_user LOCATION '/Users/gentlebookpro/Projekte/GentleCorp-Ecosystem/volumes/tablespace/transaction';
+-- CREATE TABLESPACE transaction_tablespace OWNER transaction_db_user LOCATION '/Users/gentlebookpro/Projekte/omnixys-Ecosystem/volumes/tablespace/transaction';
 
 -- (1) PowerShell:
 --     cd extras\compose\mysql
@@ -21,7 +21,7 @@
 -- mysqlsh ist *NICHT* im Docker-Image enthalten: https://dev.mysql.com/doc/refman/8.2/en/mysql.html
 
 
-CREATE USER IF NOT EXISTS 'transaction-db-user'@'%' IDENTIFIED BY 'GentleCorp11.03.2024';
+CREATE USER IF NOT EXISTS 'transaction-db-user'@'%' IDENTIFIED BY 'omnixys11.03.2024';
 
 -- 2. Erteilen Sie dem Benutzer grundlegende Zugriffsrechte.
 GRANT USAGE ON *.* TO 'transaction-db-user'@'%';

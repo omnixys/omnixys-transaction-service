@@ -59,10 +59,10 @@ spring:
           json:
             type:
               mapping: >
-                payment:com.gentlecorp.transaction.models.dto.TransactionDTO
+                com.omnixys.payment.models.events.TransactionEventDTO:com.omnixys.transaction.models.events.TransactionEventDTO
             trusted:
               packages:
-                - com.gentlecorp.person.models.event
+                - com.omnixys.payment.models.events
           deserializer:
             value:
               delegate:
@@ -76,7 +76,7 @@ spring:
           json:
             type:
               mapping:
-                balance:com.gentlecorp.transaction.model.dto.BalanceDTO
+                balance:com.omnixys.transaction.models.dto.BalanceDTO
   graphql:
     graphiql:
       enabled: true
@@ -100,7 +100,7 @@ spring:
 app:
   version: ${spring.application.version}
   name: ${spring.application.name}
-  groupId: gentlecorp-${spring.application.name}
+  groupId: omnixys-${spring.application.name}
   env: ${ACTIVE_PROFILE:test}
   password: p
   keycloak:
@@ -129,7 +129,7 @@ logging:
       %date{yyyy-MM-dd'T'HH:mm:ss.SSSXXX} %5level ${PID:- } --- [%thread]
       %-40.40logger{39} : %m%n%wEx
   level:
-    com.gentlecorp.transaction: trace
+    com.omnixys.transaction: trace
     org.apache.catalina.loader.WebappClassLoaderBase: info
     org.springframework.boot.availability.ApplicationAvailabilityBean: debug
     org.springframework.boot.devtools.autoconfigure.ConditionEvaluationDeltaLoggingListener: warn
