@@ -35,5 +35,3 @@ jobs:
         with:
           name: owasp-dependency-check-report
           path: ./dependency-check-report/*.html
-      - name: Clean up
-        run: rm -rf dc.zip dc

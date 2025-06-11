@@ -1,4 +1,7 @@
 spring:
+  flyway:
+    clean-disabled: false
+    
   config:
     activate:
       on-profile: test
