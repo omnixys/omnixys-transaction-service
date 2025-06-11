@@ -12,19 +12,21 @@ on:
 
 env:
   IMAGE_NAME: ${{ secrets.DOCKER_USER }}/${{ secrets.SERVICE }}
-  MONGODB_DATABASE: ${{ secrets.MONGODB_DATABASE }}
   SERVER_PORT: ${{ secrets.SERVER_PORT }}
   TEST_SERVER_PORT: ${{ secrets.TEST_SERVER_PORT }}
-
-  
+  MYSQL_USERNAME: ${{ secrets.MYSQL_USERNAME }}
+  MYSQL_PASSWORD: ${{ secrets.MYSQL_PASSWORD }}
+  MYSQL_DB: ${{ secrets.MYSQL_DB }}
 
   ACTIVE_PROFILE: ${{ secrets.ACTIVE_PROFILE }}
   HTTPS: ${{ secrets.HTTPS }}
 
-  MONGODB_URI: ${{ secrets.MONGODB_URI }}
-  MONGODB_USER_NAME: ${{ secrets.MONGODB_USER_NAME }}
-  MONGODB_USER_PASSWORT: ${{ secrets.MONGODB_USER_PASSWORT }}
-  TEST_MONGODB_DATABASE: ${{ secrets.TEST_MONGODB_DATABASE }}
+  MYSQL_URL: ${{ secrets.MYSQL_URL }}
+  MYSQL_HOST: ${{ secrets.MYSQL_HOST }}
+  MYSQL_PORT: ${{ secrets.MYSQL_PORT }}
+  MYSQL_TEST_DB: ${{ secrets.MYSQL_TEST_DB }}
+  MYSQL_TEST_USERNAME: ${{ secrets.MYSQL_TEST_USERNAME }}
+  MYSQL_TEST_PASSWORD: ${{ secrets.MYSQL_TEST_PASSWORD }}
 
   NVD_API_KEY: ${{ secrets.NVD_API_KEY }}
   SNYK_TOKEN: ${{ secrets.SNYK_TOKEN }}
