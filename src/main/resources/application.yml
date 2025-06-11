@@ -49,7 +49,7 @@ spring:
         validation.mode: NONE
 
   kafka:
-    bootstrap-servers: localhost:9092
+    bootstrap-servers: ${app.kafka.host}:9092
     consumer:
       group-id: ${app.groupId}
       key-deserializer: org.apache.kafka.common.serialization.StringDeserializer
@@ -96,6 +96,30 @@ spring:
         jwt:
           issuer-uri: http://${app.keycloak.host}:${app.keycloak.port}/auth/realms/${app.keycloak.realm}
 
+management:
+  metrics:
+    enable:
+      all: true
+  endpoints:
+    health:
+      probes:
+        enabled: true
+    prometheus:
+      enabled: true
+    web:
+      exposure:
+        include:
+          - prometheus
+          - health
+          - info
+          - metrics
+  tracing:
+    sampling:
+      probability: 1.0
+  otlp:
+    tracing:
+      endpoint: http://${app.tracing.tempo}:4318/v1/traces
+
 # Applikationsspezifische Einstellungen
 app:
   version: ${spring.application.version}
@@ -109,8 +133,12 @@ app:
     port: ${KC_SERVICE_PORT}
     realm: ${KC_SERVICE_REALM}
     client-id: ${KC_SERVICE_CLIENT_ID}
-  mysql:
-    url: asd
+  
+  tracing:
+    tempo: ${TEMPO_HOST}
+
+  kafka:
+    host: ${KAFKA_HOST}
 
 # Logging-Konfiguration
 logging:

@@ -93,11 +93,14 @@ dependencies {
   testImplementation("org.springframework.kafka:spring-kafka-test")
   testImplementation("org.springframework.security:spring-security-test")
   testRuntimeOnly("org.junit.platform:junit-platform-launcher")
+  testImplementation("org.testcontainers:junit-jupiter")
+  testImplementation("org.testcontainers:kafka")
+  testImplementation("org.testcontainers:mysql")
+    testImplementation("org.springframework.boot:spring-boot-testcontainers")
   /**----------------------------------------------------------------
    * SPRING BOOT STARTER
    **-------------------------------------------------------------*/
   implementation("org.springframework.boot:spring-boot-starter-actuator")//bei SecurityConfig
-  implementation("org.springframework.boot:spring-boot-starter-mail")
   implementation("org.springframework.boot:spring-boot-starter-graphql")
   implementation("org.springframework.boot:spring-boot-starter-validation")
   implementation("org.springframework.boot:spring-boot-starter-web")
