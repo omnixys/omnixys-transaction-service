@@ -22,11 +22,6 @@ class TestcontainersConfiguration {
 	@Bean
 	@ServiceConnection
 	MySQLContainer<?> mysqlContainer() {
-		return new MySQLContainer<>(DockerImageName.parse("mysql:latest"))
-			.withDatabaseName("test-db")
-			.withUsername("test-db-user")
-			.withPassword("Omnixys03.06.2025")
-			.withReuse(false) // wichtig in CI/CD
-			.waitingFor(Wait.forListeningPort().withStartupTimeout(Duration.ofSeconds(60)));
+		return new MySQLContainer<>(DockerImageName.parse("mysql:latest"));
 	}
 }
