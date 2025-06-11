@@ -51,7 +51,7 @@ jobs:
       CURRENT_DATE: ${{ steps.set_date.outputs.CURRENT_DATE }}
     strategy:
       matrix:
-        java-version: [23]
+        java-version: [24]
     steps:
       - name: Checkout code
         uses: actions/checkout@v4
@@ -112,7 +112,7 @@ jobs:
     needs: build
     strategy:
       matrix:
-        java-version: [23]
+        java-version: [24]
     steps:
     - name: Checkout Repository
       uses: actions/checkout@v4
