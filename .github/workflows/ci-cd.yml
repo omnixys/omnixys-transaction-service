@@ -98,7 +98,7 @@ jobs:
           -d '{"value": "${{ steps.set_date.outputs.CURRENT_DATE }}"}'
 
       - name: Build with Gradle
-        run: ./gradlew build --stacktrace
+        run: ./gradlew build
 
       - name: Upload Build Artifact (JAR)
         uses: actions/upload-artifact@v4
