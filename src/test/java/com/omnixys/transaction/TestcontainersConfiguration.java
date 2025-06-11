@@ -22,6 +22,12 @@ class TestcontainersConfiguration {
 	@Bean
 	@ServiceConnection
 	MySQLContainer<?> mysqlContainer() {
-		return new MySQLContainer<>(DockerImageName.parse("mysql:latest"));
-	}
+    	return new MySQLContainer<>(DockerImageName.parse("mysql:8.0")) // Verwende feste Version
+        .withUsername("test")
+        .withPassword("test")
+        .withDatabaseName("testdb")
+        .withStartupTimeout(Duration.ofMinutes(2))
+        .waitingFor(Wait.forListeningPort().withStartupTimeout(Duration.ofMinutes(2)));
+}
+
 }
